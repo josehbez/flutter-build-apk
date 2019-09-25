@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk
 
-LABEL maintainer="jhbez@outlook.com"
+LABEL maintainer="github/gitlab:jhbez"
 
 #./android/app/build.gradle
 ENV ANDROID_COMPILE_SDK "28" 
