@@ -9,7 +9,7 @@ ENV ANDROID_BUILD_TOOLS "29.0.2"
 # Last number android studio
 ENV ANDROID_SDK_TOOLS   "4333796" 
 
-ENV FLUTTER_VERSION  "1.9.1+hotfix.2"
+ENV FLUTTER_VERSION  "1.9.1+hotfix.5"
 
 RUN apt-get --quiet update --yes
 RUN apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
