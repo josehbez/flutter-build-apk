@@ -11,4 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag docker.pkg.github.com/$GITHUB_REPOSITORY/flutter-build-apk:latest
+      run: docker login docker.pkg.github.com --username $GITHUB_PACKAGES_USERNAME --password $GITHUB_PACKAGES_PASSWORD
+      run: docker push docker.pkg.github.com/$GITHUB_REPOSITORY/flutter-build-apk:latest
+      env:
+          DOCKER_USERNAME: ${{ secrets.GITHUB_PACKAGES_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.GITHUB_PACKAGES_PASSWORD }}
