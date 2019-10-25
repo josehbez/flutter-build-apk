@@ -16,5 +16,5 @@ jobs:
         docker login docker.pkg.github.com --username $GITHUB_PACKAGES_USERNAME --password $GITHUB_PACKAGES_PASSWORD 
         docker push docker.pkg.github.com/$GITHUB_REPOSITORY/flutter-build-apk:latest
       env:
-          DOCKER_USERNAME: ${{ secrets.GITHUB_PACKAGES_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.GITHUB_PACKAGES_PASSWORD }}
+          GITHUB_PACKAGES_USERNAME: ${{ secrets.GITHUB_PACKAGES_USERNAME }}
+          GITHUB_PACKAGES_PASSWORD: ${{ secrets.GITHUB_PACKAGES_PASSWORD }}
