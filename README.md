@@ -23,6 +23,12 @@ FLUTTER_VERSION     "1.9.1+hotfix.5"
 docker pull jhbez/flutter-build-apk
 ```
 
+### [Github Packages](https://github.com/joinher/flutter-build-apk/packages/)
+```
+docker pull docker.pkg.github.com/joinher/flutter-build-apk/flutter-build-apk
+```
+
+
 ### [GitLab CI/CD](https://gitlab.com) `.gitlab-ci.yml`
 ```
 image: jhbez/flutter-build-apk
